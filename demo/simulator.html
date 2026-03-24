@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BinPack Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>BinPack Compiler Demo</h1>
+        <p>Type a schema below, fill in the data, and see the bandwidth savings</p>
+    </header>
+
+    <main class="container">
+        <div class="panel">
+            <h2>1. Define Schema (.pack)</h2>
+            <select id="schema-presets">
+                <option value="player">Player Example</option>
+                <option value="exam">Exam Example</option>
+            </select>
+            <textarea id="schema-input" rows="10" spellcheck="false"></textarea>
+            <button id="btn-generate">Generate UI</button>
+        </div>
+
+        <div class="panel">
+            <h2>2. Input Data</h2>
+            <div id="dynamic-form">
+                <p style="color: #666;">Click "Generate UI" to load fields.</p>
+            </div>
+
+            <h2>3. Performance Comparison</h2>
+            <div class="results">
+                <div class="bar-container">
+                    <span class="label">JSON Size: <span id="json-bytes">0</span> bytes</span>
+                    <div id="bar-json" class="bar json-bar"></div>
+                </div>
+                <div class="bar-container">
+                    <span class="label">BinPack Size: <span id="bin-bytes">0</span> bytes</span>
+                    <div id="bar-bin" class="bar bin-bar"></div>
+                </div>
+                <h3 id="savings-text">Savings: 0%</h3>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Keeps padding inside width */
+}
+
+/* Flexbox for side-by-side comparison */
+.comparison {
+    display: flex;
+    gap: 20px;
+}
+
+.json-box, .binary-box {
+    flex: 1; /* Both take up equal space */
+}
+
+pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.hex-display {
+    background: #272822;
+    color: #a6e22e; /* Hacker green text */
+    padding: 15px;
+    border-radius: 4px;
+    font-family: monospace;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+.size-tag {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-top: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    background: #e74c3c; /* Red for bloated JSON */
+    color: white;
+}
+
+.size-tag.success {
+    background: #2ecc71; /* Green for optimized binary */
+}

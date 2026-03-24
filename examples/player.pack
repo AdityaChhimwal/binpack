@@ -1,0 +1,7 @@
+struct Player {
+    int health;
+    string[20] name;
+    int score;
+    string[30] address;
+    int phone;
+}
