@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BinPack Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1> BinPack Simulator</h1>
+
+<div class="section">
+    <h3>Schema</h3>
+    <textarea id="schema"></textarea>
+    <button onclick="compileSchema()">Compile</button>
+    <div id="compileStatus" class="status"></div>
+</div>
+
+<div class="section">
+    <h3>Generated Code</h3>
+    <div id="code" class="output"></div>
+</div>
+
+<div class="section">
+    <h3>JSON Data</h3>
+    <textarea id="jsonData"></textarea>
+
+    <h3>Or Upload JSON File</h3>
+    <input type="file" id="jsonFile" accept=".json">
+
+    <button onclick="serializeData()">Serialize</button>
+    <div id="serializeStatus" class="status"></div>
+</div>
+
+<div class="section">
+    <h3>Binary (Hex)</h3>
+    <div id="binary" class="output"></div>
+</div>
+
+<div class="section">
+    <h3>Size Comparison</h3>
+    <div id="sizes" class="output"></div>
+</div>
+
+<div class="section">
+    <h3> Size Comparison Graph</h3>
+    <canvas id="sizeChart"></canvas>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

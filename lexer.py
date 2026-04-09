@@ -24,7 +24,7 @@ def tokenize(code):
             i += 1
             continue
 
-        # 3. Identifiers or keywords (starts with a letter)
+        # 3. Identifiers (starts with a letter)
         if char.isalpha():
             start = i
             start_col = column
